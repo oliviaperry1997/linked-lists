@@ -41,9 +41,27 @@ export class LinkedList {
         } else {
             let current = this.head;
             while (current.next) {
-                current = current.next
+                current = current.next;
             }
-            return current
+            return current;
+        }
+    }
+
+    at(index) {
+        let current = this.head;
+        for (let i = 0; i < index; i++) {
+            current = current.next;
+        }
+        return current;
+    }
+
+    pop() {
+        if (this.head) {
+            let current = this.head;
+            while (current.next.next) {
+                current = current.next;
+            }
+            current.next = null;
         }
     }
 
@@ -51,7 +69,8 @@ export class LinkedList {
         let current = this.head;
         let output = "";
         while (current) {
-            output += `( ${current.value} )` + (current.next ? " -> " : " -> null");
+            output +=
+                `( ${current.value} )` + (current.next ? " -> " : " -> null");
             current = current.next;
         }
         return output;

@@ -15,3 +15,6 @@ console.log(list.toString());
 console.log(list.size());
 console.log(list.printHead());
 console.log(list.printTail());
+console.log(list.at(3));
+list.pop();
+console.log(list.toString());
