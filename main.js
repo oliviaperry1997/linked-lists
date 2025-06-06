@@ -11,4 +11,7 @@ list.append("turtle");
 
 list.prepend("elephant");
 
-console.log(list.toString())
+console.log(list.toString());
+console.log(list.size());
+console.log(list.printHead());
+console.log(list.printTail());

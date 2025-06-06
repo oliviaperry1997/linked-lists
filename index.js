@@ -24,6 +24,27 @@ export class LinkedList {
             newNode.next = this.head;
         }
         this.head = newNode;
+        this.length++;
+    }
+
+    size() {
+        return this.length;
+    }
+
+    printHead() {
+        return this.head;
+    }
+
+    printTail() {
+        if (!this.head) {
+            return null;
+        } else {
+            let current = this.head;
+            while (current.next) {
+                current = current.next
+            }
+            return current
+        }
     }
 
     toString() {
