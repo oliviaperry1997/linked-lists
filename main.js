@@ -32,3 +32,10 @@ console.log(list.find("elephant"));
 console.log(list.find("parrot"));
 console.log(list.find("snake"));
 console.log(list.find("turtle"));
+
+list.insertAt("mammoth", 3);
+list.insertAt("monkey", 0);
+console.log(list.toString());
+
+list.removeAt(6);
+console.log(list.toString());

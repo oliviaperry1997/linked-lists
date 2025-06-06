@@ -63,6 +63,7 @@ export class LinkedList {
             }
             current.next = null;
         }
+        this.length--;
     }
 
     contains(value) {
@@ -98,6 +99,37 @@ export class LinkedList {
             current = current.next;
         }
         return output;
+    }
+
+    insertAt(value, index) {
+        const newNode = new Node(value)
+        if (index === 0) {
+            newNode.next = this.head;
+            this.head = newNode;
+        } else {
+            let current = this.head;
+            for (let i=0; i<(index-1) && i<this.length; i++) {
+                current = current.next;
+            }
+            newNode.next = current.next;
+            current.next = newNode;
+        }
+        this.length++
+    }
+
+    removeAt(index) {
+        if (index === 0) {
+            this.head = this.head.next;
+        } else if (index >= this.length) {
+            return;
+        } else {
+            let current = this.head;
+            for (let i=0; i<(index-1); i++) {
+                current = current.next;
+            }
+            current.next = current.next.next;
+        }
+        this.length--;
     }
 }
 
