@@ -65,6 +65,30 @@ export class LinkedList {
         }
     }
 
+    contains(value) {
+        let current = this.head;
+        while (current) {
+            if (current.value === value) {
+                return true;
+            }
+            current = current.next;
+        }
+        return false;
+    }
+
+    find(value) {
+        let current = this.head;
+        let index = 0;
+        while (current) {
+            if (current.value === value) {
+                return index;
+            }
+            current = current.next;
+            index++;
+        }
+        return null;
+    }
+
     toString() {
         let current = this.head;
         let output = "";

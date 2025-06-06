@@ -12,9 +12,23 @@ list.append("turtle");
 list.prepend("elephant");
 
 console.log(list.toString());
+
 console.log(list.size());
+
 console.log(list.printHead());
 console.log(list.printTail());
+
 console.log(list.at(3));
+
 list.pop();
+
 console.log(list.toString());
+
+console.log(list.contains("elephant"));
+console.log(list.contains("turtle"));
+console.log(list.contains("snake"));
+
+console.log(list.find("elephant"));
+console.log(list.find("parrot"));
+console.log(list.find("snake"));
+console.log(list.find("turtle"));
