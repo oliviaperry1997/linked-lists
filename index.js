@@ -18,11 +18,19 @@ export class LinkedList {
         this.length++;
     }
 
+    prepend(value) {
+        const newNode = new Node(value);
+        if (this.head) {
+            newNode.next = this.head;
+        }
+        this.head = newNode;
+    }
+
     toString() {
         let current = this.head;
         let output = "";
         while (current) {
-            output += current.value + (current.next ? " -> " : "");
+            output += `( ${current.value} )` + (current.next ? " -> " : " -> null");
             current = current.next;
         }
         return output;
